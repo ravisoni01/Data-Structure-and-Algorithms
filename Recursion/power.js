@@ -3,6 +3,6 @@
 console.log(power(2, 4));
 
 function power(base, exponent) {
-  if (exponent === 0 || exponent === 1) return base;
-  return base ** exponent;
+  if (exponent === 0) return base;
+  return base * power(base, exponent - 1);
 }

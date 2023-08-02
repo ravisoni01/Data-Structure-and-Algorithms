@@ -15,7 +15,7 @@
 //   return max;
 // }
 
-console.log(maxSubArray([1, 2, 3, 4, 3, 2, 4, 5], 5));
+console.log(maxSubArray([2, 1, 5, 1, 3, 2], 3));
 
 // ----- Refactor
 

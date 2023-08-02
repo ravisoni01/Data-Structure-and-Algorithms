@@ -3,19 +3,20 @@ function longestString(str) {
   let end = 0;
   let maxLength = 0;
 
-  let uniqueString = new Set();
+  let unqiueString = new Set();
 
   while (end < str.length) {
-    if (!uniqueString.has(str[end])) {
-      uniqueString.add(str[end]);
+    if (!unqiueString.has(str[end])) {
+      unqiueString.add(str[end]);
       end++;
-      maxLength = Math.max(maxLength, uniqueString.size);
+      maxLength = Math.max(maxLength, unqiueString.size);
     } else {
-      uniqueString.delete(str[start]);
+      unqiueString.delete(str[start]);
       start++;
     }
   }
+
   return maxLength;
 }
 
-console.log(longestString("abccabc"));
+console.log(longestString("abcscabc"));
